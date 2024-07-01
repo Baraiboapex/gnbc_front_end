@@ -1,0 +1,47 @@
+/*-----Navbar Animations-----*/
+    #mainNav.open-menu{
+        height:auto;
+        display:flex !important; 
+        align-items:start;
+        /*
+        -webkit-animation-name: nav-open !important;
+        -ms-animation-name: nav-open !important;
+        animation-name: nav-open !important;
+        -moz-animation-name: nav-open !important;
+        -o-animation-name: nav-open !important;
+        -webkit-animation-duration: 1s !important;
+        -ms-animation-duration: 1s !important;
+        animation-duration: 1s !important;
+        -moz-animation-duration: 1s !important;
+        -o-animation-duration: 1s !important;
+        animation-delay:0.5s !important;  
+        -moz-animation-delay: 0.5s !important;*/
+    }
+    #mainNav.close-menu{
+        height:3em;
+        /*-webkit-animation-name: nav-close !important;
+        -ms-animation-name: nav-close !important;
+        animation-name: nav-close !important;
+        -moz-animation-name: nav-close !important;
+        -o-animation-name: nav-close !important;
+        -webkit-animation-duration: 1s !important;
+        -ms-animation-duration: 1s !important;
+        animation-duration: 1s !important;
+        -moz-animation-duration: 1s !important;
+        -o-animation-duration: 1s !important;
+        animation-delay:0.5s !important; 
+        -moz-animation-delay: 0.5s !important;*/
+    }
+    /*nav-open keyframes*/
+    @-webkit-keframes nav-open{ from {height:3em;} to {height:92vh;} }
+    @keframes nav-open{from {height:3em;} to {height:92vh;} }
+    @-moz-keframes nav-open{from {height:3em;} to {height:92vh;} }
+    @-o-keframes nav-open{from {height:3em;} to {height:92vh;} }
+    @-ms-keframes nav-open{from {height:3em;} to {height:92vh;} }
+    /*nav-close keyframes*/
+    @-webkit-keframes nav-close{from {height:92vh;} to {height:3em;} }
+    @keframes nav-close{from {height:92vh;} to {height:3em;} }
+    @-moz-keframes nav-close{from {height:92vh;} to {height:3em;} }
+    @-o-keframes nav-close{from {height:92vh;} to {height:3em;} }
+    @-ms-keframes nav-close{from {height:92vh;} to {height:3em;} }
+/*-----Navbar Animations-----*/

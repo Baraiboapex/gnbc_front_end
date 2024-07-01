@@ -1,0 +1,8 @@
+:root{
+    --gnbc-blue-light-- : #4F83B2;
+    --gnbc-blue-dark-- : #26415A;
+    --gnbc-blue-hover-- : #355877;
+    --gnbc-light-transparent--:rgba(79,131,178,0.48);
+    --gnbc-dark-transparent--:rgba(38,65,90,0.48);
+    --gnbc-hover-transparent--:rgba(53,88,119,0.48);
+}

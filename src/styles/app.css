@@ -1,0 +1,269 @@
+@charset "UTF-8";
+@import "colors.css";
+@import "animations.css";
+@import "https://fonts.googleapis.com/css?family=Molengo&display=swap";
+
+/*---------------Main CSS---------------*/
+    /*DO NOT ALTER UNLESS ABSOLUTELY NECESSARY!!!*/
+    html,body{
+        height:100%;
+        margin:0;
+    }
+    .browser-height{
+        height:100%;
+        background-color:black;
+    }
+    #mainBody{
+        height:100%;
+        text-transform:'capitalize';
+    }
+/*---------------Main CSS---------------*/
+
+/*--------------CSS Layout Elements-------------*/
+
+/*==Navbar==*/
+    #mainNav,#menu-contain{
+        background-color:var(--gnbc-blue-light--);
+        font-family: "Molengo";
+        text-transform: uppercase;
+        font-size:1.25rem;
+        letter-spacing: 0.4rem;
+        height:100%;
+    }
+    .gnbc-jax-logo{
+        background-color:var(--gnbc-blue-dark--);
+    }
+    #gnbcJaxLogo{
+        background-position: center center;
+        background-color:var(--gnbc-blue-dark--);
+        background-image:url("../images/gnbc-header-2.png");
+        background-size: 18rem;
+        background-repeat: no-repeat;
+        height:8em;
+    }
+    #gnbcJaxLogoSmall{
+        background-image:url("../images/gnbc-header-2.png");
+        background-size: 5rem;
+        background-size: 14rem;
+        padding-bottom:2.5em;
+        background-repeat: no-repeat;
+        min-width:11em;
+        position:relative;
+        object-fit: contain;
+        background-position: 0 center;
+        float:right;
+    }
+    #gnbcJaxLogoSmall.really-hide{
+        display:none !important;
+    }
+    #gnbcJaxLogo.display-block{
+        display:block !important;
+        padding-top:3em;
+        padding-left:50vw;
+        padding-right:50vw;
+        padding-bottom:3em;
+    }
+    #gnbcMenuButton{
+       padding:0rem;
+       top:0;
+       right:0; 
+    }
+    #gnbcMenuButton:hover{
+        opacity:0.4; 
+    }
+    #mainNav .nav-item .nav-link:hover{
+        background-color:var(--gnbc-blue-hover--);
+    }
+    #mainNav .nav-item .nav-link span{
+        border-left:3px solid white;
+    }
+    .social-media-nav{
+        background-color:var(--gnbc-blue-hover--);
+        padding:0.35em;
+        bottom:0;
+    }
+    .social-media-nav a:hover{
+        color:white;
+    }    
+/*==Navbar==*/
+
+/*==Home Page Body==*/
+    .home-content{
+        z-index:1;
+        position:relative;
+    }
+    .home-btns-container{
+        height:5em;
+        position:relative;
+        margin-top:-11.4em;
+    }
+    .home-btns{
+        background-color:rgba(0,0,0,0.5);
+        box-shadow:0px 0px 10px black;
+        color:white; 
+        width:75%;
+        border-radius:30em;
+        border:1px solid white;
+        font-size:1.2rem;
+        text-transform:uppercase;
+        letter-spacing:0.2em;
+    }
+    .home-btns:hover{
+        color:black;
+        text-decoration:none;
+        background-color:rgba(100,100,100,0.7);
+    }
+    .add-image{
+        object-fit:cover;
+        width:100vh;
+        height:100vh;
+    }
+    .carousel-indicators{
+        border-radius:10em;
+        background-color:rgba(0,0,0,0.3);
+        margin-top:-100px;
+        display:block;
+    }
+    .carousel-indicators li{
+        border-radius:100%;
+        height:1.5em !important;
+        width:1.5em !important;
+        background-color: transparent !important;
+        border:1px solid white !important;
+        display:block; 
+    }
+    .carousel-indicators li.active{
+        background-color: white !important;
+        border:1px solid white !important;
+    }
+    .add-container{
+        position:absolute;
+        height:100vh;
+        background-color: rgba(32,57,80,0.5);
+        z-index:16;
+        top: 0;
+        left:0;
+    }
+    button.close-add-viewer-btn{
+        color:white;
+        border: 2px solid white;
+        background-color:transparent;
+        border-radius:100%;
+        font-size:1rem;
+        line-break: 1rem;
+        height:2em;
+        width:2em;
+    }
+    button.close-add-viewer-btn:hover{
+        cursor: pointer;
+        border:2px solid white;
+        color:black;
+        background-color:white;
+    }
+    .add-about-text,.add-about-time,.add-about-location,.add-about-title{
+        font-family:"Molengo";
+        text-transform:capitalize;
+        letter-spacing:0.15555rem;
+    }
+    .add-about-title{
+        font-weight:bold;
+    }
+    .add-viewer{
+        background-color:#386891;
+    }
+/*==Home Page Body==*/
+
+/*==Custom Media Queries For Pages==*/
+    /* Home Page Media Query*/
+    @media(max-width:1024px){
+        .home-carousel.carousel-caption{
+            position:absolute;
+        }
+        #mainNav{
+            height:100vh;
+        }
+    }
+    @media(max-width:991px){
+        .home-carousel.carousel-item{
+            display:block;
+        }
+        #mainNav .nav-item .nav-link span{
+            border-left:none;
+        }
+        #mainNav{
+            height:3em;
+        }
+        .add-viewer{
+            position:fixed;
+            overflow:scroll;
+            top:0;
+            left:0;
+        }
+    }
+    @media(max-width:720px){
+        .add-image{
+            object-fit:cover;
+            width:100vh;
+            height:100vh;
+            margin-top:0;
+        }
+        .home-carousel.carousel-caption{
+            position:static;
+            padding:0px;
+        }
+        .home-btns{
+            margin-top:1em;
+            margin-bottom:1em;
+        }
+        .home-btns-container{
+            background:var(--gnbc-light-transparent--);
+            position:absolute;
+            bottom:0;
+            height:7em;
+            margin-top:0 !important;
+        }
+    }
+    @media(max-width:520px){
+        .add-image{
+            object-fit:cover;
+            width:100%;
+            height:100%;
+        }
+        .add-viewer{
+            position:fixed;
+            overflow:scroll;
+            top:0;
+            left:0;
+        }
+        .home-carousl.home-carousel.carousel-item{
+            height:100% !important;
+            width:100% !important;
+        }
+    }
+/*==Custom Media Queries For Pages==*/
+
+/*--------------CSS Layout Elements-------------*/
+
+/*--------------Reusable CSS Elements-------------*/
+    .cursor-pointer{
+        cursor: pointer;
+    }
+    .gnbc-btn{
+        cursor: pointer;
+        border:2px solid white !important;
+        padding:0.5em !important;
+        border-radius:30em !important;
+        color:white !important;
+    }
+    .gnbc-btn:hover{
+        text-decoration:none !important;
+        background-color: white !important;
+        color:black !important;
+    }
+    .scroll-lock{
+        overflow:hidden;
+    }
+    .scroll-enable{
+        overflow:scroll;
+    }
+/*--------------Reusable CSS Elements-------------*/
